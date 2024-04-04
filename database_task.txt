@@ -1,0 +1,487 @@
+
+1.What do you understand By Database
+Ans:-
+
+A database is an organized collection of data stored in a computer system and usually controlled by a database management system (DBMS). The data in common databases is modeled in tables, making querying and processing efficient. Structured query language (SQL) is commonly used for data querying and writing.
+
+The Database is an essential part of our life. We encounter several activities that involve our interaction with databases, for example in the bank, in the railway station, in school, in a grocery store, etc. These are the instances where we need to store a large amount of data in one place and fetch these data easily. 
+
+2.What is Normalization?
+Ans:-
+
+Normalization is a database design technique that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update and Deletion Anomalies. Normalization rules divides larger tables into smaller tables and links them using relationships. The purpose of Normalisation in SQL is to eliminate redundant (repetitive) data and ensure data is stored logically.
+
+The inventor of the relational model Edgar Codd proposed the theory of normalization of data with the introduction of the First Normal Form, and he continued to extend theory with Second and Third Normal Form. Later he joined Raymond F. Boyce to develop the theory of Boyce-Codd Normal Form.
+
+Here is a list of Normal Forms in SQL:
+
+1NF (First Normal Form)
+
+2NF (Second Normal Form)
+
+3NF (Third Normal Form) 
+
+BCNF (Boyce-Codd Normal Form)
+
+4NF (Fourth Normal Form)
+
+5NF (Fifth Normal Form)
+
+6NF (Sixth Normal Form)
+
+3. What is Difference between DBMS and RDBMS? 
+Ans:-
+
+ In general, databases store sets of data that can be queried for use in other applications. A database management system supports the development, administration and use of database platforms.
+
+An RDBMS is a type of database management system (DBMS) that stores data in a row-based table structure which connects related data elements. An RDBMS includes functions that maintain the security, accuracy, integrity and consistency of the data. This is different than the file storage used in a DBMS.
+
+Other differences between database management systems and relational database management systems include:
+
+Number of allowed users. While a DBMS can only accept one user at a time, an RDBMS can operate with multiple users.
+Hardware and software requirements. A DBMS needs less software and hardware than an RDBMS.
+Amount of data. RDBMSes can handle any amount of data, from small to large, while a DBMS can only manage small amounts.
+Database structure. In a DBMS, data is kept in a hierarchical form, whereas an RDBMS utilizes a table where the headers are used as column names and the rows contain the corresponding values.
+ACID implementation. DBMSes do not use the atomicity, consistency, isolation and durability (ACID) model for storing data. On the other hand, RDBMSes base the structure of their data on the ACID model to ensure consistency.
+Distributed databases. While an RDBMS offers complete support for distributed databases, a DBMS will not provide support.
+Types of programs managed. While an RDBMS helps manage the relationships between its incorporated tables of data, a DBMS focuses on maintaining databases that are present within the computer network and system hard disks.
+Support of database normalization. An RDBMS can be normalized, but a DBMS cannot.
+
+As mentioned before, an RDBMS will store data in the form of a table. Each system will have varying numbers of tables with each table possessing its own unique primary key. The primary key is then used to identify each table.
+
+Within the table are rows and columns. The rows are known as records or horizontal entities; they contain the information for the individual entry. The columns are known as vertical entities and possess information about the specific field.
+
+Before creating these tables, the RDBMS must check the following constraints:
+
+Primary keys -- this identifies each row in the table. One table can only contain one primary key. The key must be unique and without null values.
+
+Foreign keys -- this is used to link two tables. The foreign key is kept in one table and refers to the primary key associated with another table.
+
+Not null -- this ensures that every column does not have a null value, such as an empty cell.
+
+Check -- this confirms that each entry in a column or row satisfies a precise condition and that every column holds unique data.
+
+Data integrity -- the integrity of the data must be confirmed before the data is created.
+
+Assuring the integrity of data includes several specific tests, including entity, domain, referential and user-defined integrity. Entity integrity confirms that the rows are not duplicated in the table. Domain integrity makes sure that data is entered into the table based on specific conditions, such as file format or range of values. Referential integrity ensures that any row that is re-linked to a different table cannot be deleted. Finally, user-defined integrity confirms that the table will satisfy all user-defined conditions.
+
+Advantages of relational database management system
+
+The use of an RDBMS can be beneficial to most organizations; the systematic view of raw data helps companies better understand and execute the information while enhancing the decision-making process. The use of tables to store data also improves the security of information stored in the databases. Users are able to customize access and set barriers to limit the content that is made available. This feature makes the RDBMS particularly useful to companies in which the manager decides what data is provided to employees and customers.
+
+Furthermore, RDBMSes make it easy to add new data to the system or alter existing tables while ensuring consistency with the previously available content.
+
+Other advantages of the RDBMS include:
+
+Flexibility -- updating data is more efficient since the changes only need to be made in one place.
+
+Maintenance -- database administrators can easily maintain, control and update data in the database. Backups also become easier since automation tools included in the RDBMS automate these tasks.
+
+Data structure -- the table format used in RDBMSes is easy to understand and provides an organized and structural manner through which entries are matched by firing queries.
+On the other hand, relational database management systems do not come without their disadvantages. For example, in order to implement an RDBMS, special software must be purchased. This introduces an additional cost for execution. Once the software is obtained, the setup process can be tedious since it requires millions of lines of content to be transferred into the RDBMS tables. This process may require the additional help of a programmer or a team of data entry specialists. Special attention must be paid to the data during entry to ensure sensitive information is not placed into the wrong hands.
+
+Some other drawbacks of the RDBMS include the character limit placed on certain fields in the tables and the inability to fully understand new forms of data -- such as complex numbers, designs and images.
+
+Furthermore, while isolated databases can be created using an RDBMS, the process requires large chunks of information to be separated from each other. Connecting these large amounts of data to form the isolated database can be very complicated.
+
+Uses of RDBMS
+
+Relational database management systems are frequently used in disciplines such as manufacturing, human resources and banking. The system is also useful for airlines that need to store ticket service and passenger documentation information as well as universities maintaining student databases.
+
+Some examples of specific systems that use RDBMS include IBM, Oracle, MySQL, Microsoft SQLServer and PostgreSQL.
+
+
+
+4. What is MF Cod Rule of RDBMS Systems? 
+
+ans:-
+
+Rule 0 − Foundation rule
+
+Any relational database management system that is propounded to be RDBMS or advocated to be a RDBMS should be able to manage the stored data in its entirety through its relational capabilities.
+
+Rule 1 − Rule of Information
+
+Relational Databases should store the data in the form of relations. Tables are relations in Relational Database Management Systems. Be it any user defined data or meta-data, it is important to store the value as an entity in the table cells.
+
+Rule 2 − Rule of Guaranteed Access
+
+The use of pointers to access data logically is strictly forbidden. Every data entity which is atomic in nature should be accessed logically by using a right combination of the name of table, primary key represented by a specific row value and column name represented by attribute value.
+
+Rule 3 − Rule of Systematic Null Value Support
+
+Null values are completely supported in relational databases. They should be uniformly considered as ‘missing information’. Null values are independent of any data type. They should not be mistaken for blanks or zeroes or empty strings. Null values can also be interpreted as ‘inapplicable data’ or ‘unknown information.’
+
+Rule 4 − Rule of Active and online relational Catalog
+
+In the Database Management Systems lexicon, ‘metadata’ is the data about the database or the data about the data. The active online catalog that stores the metadata is called ‘Data dictionary’. The so called data dictionary is accessible only by authored users who have the required privileges and the query languages used for accessing the database should be used for accessing the data of data dictionary.
+
+Rule 5 − Rule of Comprehensive Data Sub-language
+
+A single robust language should be able to define integrity constraints, views, data manipulations, transactions and authorizations. If the database allows access to the aforementioned ones, it is violating this rule.
+
+Rule 6 − Rule of Updating Views
+
+Views should reflect the updates of their respective base tables and vice versa. A view is a logical table which shows restricted data. Views generally make the data readable but not modifiable. Views help in data abstraction.
+
+Rule 7 − Rule of Set level insertion, update and deletion
+
+A single operation should be sufficient to retrieve, insert, update and delete the data.
+
+Rule 8 − Rule of Physical Data Independence
+
+Batch and end user operations are logically separated from physical storage and respective access methods.
+
+Rule 9 − Rule of Logical Data Independence
+
+Batch and end users can change the database schema without having to recreate it or recreate the applications built upon it.
+
+Rule 10 − Rule of Integrity Independence
+
+Integrity constraints should be available and stored as metadata in data dictionary and not in the application programs.
+
+Rule 11 − Rule of Distribution Independence
+
+The Data Manipulation Language of the relational system should not be concerned about the physical data storage and no alterations should be required if the physical data is centralized or distributed.
+
+Rule 12 − Rule of Non Subversion
+
+Any row should obey the security and integrity constraints imposed. No special privileges are applicable.
+
+Almost all full scale DBMSs are RDMSs. Oracle implements 11+ rules and so does Sybase. SQL Server also implements 11+ rules while FoxPro implements 7+ rules.
+
+5. What do you understand By Data Redundancy?
+ans:-
+
+Data redundancy occurs when the same piece of data exists in multiple places, whereas data inconsistency is when the same data exists in different formats in multiple tables. Unfortunately, data redundancy can cause data inconsistency, which can provide a company with unreliable and/or meaningless information.
+
+6. What is DDL Interpreter? 
+ans:-
+
+DDL Interpreter:-
+ It interprets the DDL (Data Definition Language) Instructions and stores the record in a data dictionary (in a table containing meta-data) Query Optimizer: It executes the DML Instructions and picks the lowest cost evaluation plan out of all the alternatives present.
+
+7. What is DML Compiler in SQL? 
+ans:-
+
+ A data manipulation language (DML) is a computer programming language used for adding (inserting), deleting, and modifying (updating) data in a database. A DML is often a sublanguage of a broader database language such as SQL, with the DML comprising some of the operators in the language.
+
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints
+ans:-
+
+In a database table, we can add rules to a column known as constraints. These rules control the data that can be stored in a column.
+
+For example, if a column has NOT NULL constraint, it means the column cannot store NULL values.
+
+The constraints used in SQL are:
+
+Constraint	Description
+
+NOT NULL	values cannot be null.
+
+UNIQUE	values cannot match any older value.
+
+PRIMARY KEY	used to uniquely identify a row.
+
+FOREIGN KEY	references a row in another table.
+
+CHECK	validates condition for new value.
+
+DEFAULT	set default value if not passed.
+
+CREATE INDEX	used to speedup the read process.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Create table given below: Employee and Incentive 
+Table Name: Employee
+
+MySQL> create table Employee(Employee int auto_increment primary key,First_name varchar(150),Last_name varchar(150),Salary int,Joining_date date,Departme
+nt varchar(50));
+Query OK, 0 rows affected (0.82 sec)
+MySQL> desc Employee;
+
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| Employee_id  | int          | NO   | PRI | NULL    | auto_increment |
+| First_name   | varchar(150) | YES  |     | NULL    |                |
+| Last_name    | varchar(150) | YES  |     | NULL    |                |
+| Salary       | int          | YES  |     | NULL    |                |
+| Joining_date | date         | YES  |     | NULL    |                |
+| Department   | varchar(50)  | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into Employee values(1,"jhon","abraham",1000000,"2013-01-01 12:00:00","banking");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into employee values(2,"michael","clarke",8000000,"2013-01-01 12:00:00","insurance");
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into employee values(3,"roy","thomas",7000000,"2013-02-01 12:00:00","banking");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into employee values(4,"tom","jose",600000,"2013-02-01 12.00.00","Insurance");
+Query OK, 1 row affected, 1 warning (0.29 sec)
+
+mysql> insert into employee values(5,"jerry","pinto",650000,"2013-02-01 12:00:00","insurance");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into employee values(6,"philio","mathew",750000,"2013-01-01 12:00:00","services");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee values(7,"testname1",123,650000,"2013-01-01 12:00:00","services");
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into employee values(8,"testname2","lname%",600000,"2013-02-01 12:00:00","insurance");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> desc incentive;
++-----------------+------+------+-----+---------+-------+
+| Field           | Type | Null | Key | Default | Extra |
++-----------------+------+------+-----+---------+-------+
+| Employee_ref_id | int  | YES  | MUL | NULL    |       |
+| incentive_date  | date | YES  |     | NULL    |       |
+| incentive_amout | int  | YES  |     | NULL    |       |
+3 rows in set (0.00 sec)
+
+mysql> insert into incentive values (1,"2013-02-01",5000);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into incentive values (3,"2013-02-01",4000);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into incentive values (1,"2013-01-01",4500);
+Query OK, 1 row affected (0.17 sec)
+
+
+mysql> insert into incentive values (2,"2013-01-01",3500);
+Query OK, 1 row affected (0.05 sec)
+
+----------------------------------------------------------------------------------------------------------------------------
+
+query :-
+
+a. Get First_Name from employee table using Tom name “Employee Name”.
+
+ mysql> select * from employee where First_name = "tom";
++-------------+------------+-----------+--------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary | joining_date        | Department |
++-------------+------------+-----------+--------+---------------------+------------+
+|           4 | tom        | jose      | 600000 | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+--------+---------------------+------------+
+
+b. Get FIRST_NAME, Joining Date, and Salary from employee table. 
+
+mysql> select First_name, joining_date, Salary from employee;
++------------+---------------------+---------+
+| First_name | joining_date        | Salary  |
++------------+---------------------+---------+
+| jhon       | 2013-01-01 12:00:00 | 1000000 |
+| michael    | 2013-01-01 12:00:00 | 8000000 |
+| roy        | 2013-02-01 12:00:00 | 7000000 |
+| tom        | 2013-02-01 12:00:00 |  600000 |
+| jerry      | 2013-02-01 12:00:00 |  650000 |
+| philio     | 2013-01-01 12:00:00 |  750000 |
+| testname1  | 2013-01-01 12:00:00 |  650000 |
+| testname2  | 2013-02-01 12:00:00 |  600000 |
++------------+---------------------+---------+
+8 rows in set (0.00 sec)
+
+c. Get all employee details from the employee table order by First_Name
+Ascending and Salary descending?
+
+mysql> select * from employee order by First_name asc;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           5 | jerry      | pinto     |  650000 | 2013-02-01 12:00:00 | insurance  |
+|           1 | jhon       | abraham   | 1000000 | 2013-01-01 12:00:00 | banking    |
+|           2 | michael    | clarke    | 8000000 | 2013-01-01 12:00:00 | insurance  |
+|           6 | philio     | mathew    |  750000 | 2013-01-01 12:00:00 | services   |
+|           3 | roy        | thomas    | 7000000 | 2013-02-01 12:00:00 | banking    |
+|           7 | testname1  | 123       |  650000 | 2013-01-01 12:00:00 | services   |
+|           8 | testname2  | lname%    |  600000 | 2013-02-01 12:00:00 | insurance  |
+|           4 | tom        | jose      |  600000 | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+8 rows in set (0.02 sec)
+
+mysql> select * from employee order by Salary desc;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           2 | michael    | clarke    | 8000000 | 2013-01-01 12:00:00 | insurance  |
+|           3 | roy        | thomas    | 7000000 | 2013-02-01 12:00:00 | banking    |
+|           1 | jhon       | abraham   | 1000000 | 2013-01-01 12:00:00 | banking    |
+|           6 | philio     | mathew    |  750000 | 2013-01-01 12:00:00 | services   |
+|           5 | jerry      | pinto     |  650000 | 2013-02-01 12:00:00 | insurance  |
+|           7 | testname1  | 123       |  650000 | 2013-01-01 12:00:00 | services   |
+|           4 | tom        | jose      |  600000 | 2013-02-01 12:00:00 | Insurance  |
+|           8 | testname2  | lname%    |  600000 | 2013-02-01 12:00:00 | insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+8 rows in set (0.00 sec)
+
+d. Get employee details from employee table whose first name contains ‘J’.
+
+mysql> select * from employee where First_name like 'j%';
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           1 | jhon       | abraham   | 1000000 | 2013-01-01 12:00:00 | banking    |
+|           5 | jerry      | pinto     |  650000 | 2013-02-01 12:00:00 | insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+2 rows in set (0.03 sec)
+
+e. Get department wise maximum salary from employee table order by salary
+ascending?
+
+mysql> select Department,max(Salary) from employee group by Department order by max(Salary) asc;
++------------+-------------+
+| Department | max(Salary) |
++------------+-------------+
+| services   |      750000 |
+| banking    |     7000000 |
+| insurance  |     8000000 |
++------------+-------------+
+3 rows in set (0.00 sec)
+
+f. Select first_name, incentive amount from employee and incentives table for
+those employees who have incentives and incentive amount greater than 3000.
+
+mysql> select employee.First_name,incentive_amout from employee INNER JOIN incentive ON employee.Employee_id=incentive.Employee_ref_id where incentive_amout > 3000;
++------------+-----------------+
+| First_name | incentive_amout |
++------------+-----------------+
+| jhon       |            5000 |
+| roy        |            4000 |
+| jhon       |            4500 |
+| michael    |            3500 |
++------------+-----------------+
+4 rows in set (0.00 sec)
+
+---------------------------------------------------------------------------------------------------------------------------
+
+4. Create table given below:
+
+mysql> create table salesperson (Sno int auto_increment primary key,Sname varchar(100),City varchar(100),Comm int );
+Query OK, 0 rows affected (0.47 sec)
+mysql> desc salesperson;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| Sno   | int          | NO   | PRI | NULL    | auto_increment |
+| Sname | varchar(100) | YES  |     | NULL    |                |
+| City  | varchar(100) | YES  |     | NULL    |                |
+| Comm  | int          | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into salesperson values(1001,"peel","london",.12);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into salesperson values(1002,"serres","san_jose",.13);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into salesperson values(1004,"motika","london",.11);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into salesperson values(1007,"rafkin","barcelona",.15);
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into salesperson values(1003,"axelrod","new_york",.1);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> create table customer (cnn int auto_increment primary key,cname varchar(100),city varchar(100),rating int,sno int);
+Query OK, 0 rows affected (0.92 sec)
+
+mysql> update salesperson set Comm=0.13 where sno=1002;
+Query OK, 1 row affected (0.17 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update salesperson set Comm=0.10 where sno=1003;
+Query OK, 1 row affected (0.10 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update salesperson set Comm=0.110 where sno=1004;
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update salesperson set Comm=0.150 where sno=1007;
+Query OK, 1 row affected (0.16 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> desc customer;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| cnn    | int          | NO   | PRI | NULL    | auto_increment |
+| cname  | varchar(100) | YES  |     | NULL    |                |
+| city   | varchar(100) | YES  |     | NULL    |                |
+| rating | int          | YES  |     | NULL    |                |
+| sno    | int          | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+mysql> insert into customer values(201,"hoffman","london",100,1001);
+Query OK, 1 row affected (0.22 sec)
+mysql> insert into customer values(202,"giovanne","roe",200,1003);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into customer values(203,"liu","san_jose",300,1002);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into customer values(204,"geass","barcelona",100,1002);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into customer values(206,"clemens","london",300,1007);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into customer values(207,"pereira","roe",100,1004);
+Query OK, 1 row affected (0.12 sec)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+A. Names and cities of all salespeople in London with commission above 0.12 
+
+mysql> select sname, city from salesperson where comm >=0.12 AND city="london";
++-------+--------+
+| sname | city   |
++-------+--------+
+| peel  | london |
++-------+--------+
+1 row in set (0.01 sec)
+
+B. All salespeople either in Barcelona or in London
+
+mysql> select * from salesperson where city="barcelona" OR city="london";
++------+--------+-----------+-------+
+| Sno  | Sname  | City      | Comm  |
++------+--------+-----------+-------+
+| 1001 | peel   | london    | 0.120 |
+| 1004 | motika | london    | 0.110 |
+| 1007 | rafkin | barcelona | 0.150 |
++------+--------+-----------+-------+
+3 rows in set (0.00 sec)
+
+C. All salespeople with commission between 0.10 and 0.12. (Boundary values
+should be excluded)
+
+mysql> select * from salesperson where comm>0.10 AND comm<0.12;
++------+--------+--------+-------+
+| Sno  | Sname  | City   | Comm  |
++------+--------+--------+-------+
+| 1004 | motika | london | 0.110 |
++------+--------+--------+-------+
+1 row in set (0.00 sec)
+
+D. All customers excluding those with rating <= 100 unless they are located in
+Rome
+
+mysql> select * from customer where rating<=100 AND city="roe";
++-----+---------+------+--------+------+
+| cnn | cname   | city | rating | sno  |
++-----+---------+------+--------+------+
+| 207 | pereira | roe  |    100 | 1004 |
++-----+---------+------+--------+------+
+1 row in set (0.00 sec)
